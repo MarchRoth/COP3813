@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grade Input Page</title>
+    </head>
+    <body>
+        <h1>Please Enter The New Grade Information</h1>
+        <form method="POST" id="gradeform">
+            <div id="semestercontainer">
+                <label for="semester">Semester:</label>
+                <input type="text" name="semester" id="semester" placeholder="Fall,Spring,...">
+            </div>
+            <div id="yearcontainer">
+                <label for="year">Year:</label>
+                <input type="number" name="year" id="year" min="1920" max="2026" step="1" placeholder="2026">
+            </div> 
+            <div id="coursecontainer">
+                <label for="courseid">Course I.D.:</label>
+                <input type="text" name="courseid" id="courseid" placeholder="COP3813">
+            </div>
+            <div id="creditcontainer">
+                <label for="credithours">Credit Hours:</label>
+                <input type="text" name="credithourse" id="credithours" placeholder="3">
+            </div>
+            <div id="grade container">
+                <div>
+                    <label for="aplus">A+</label>
+                    <input type="radio" name="grades" id="aplus" value="A+">
+                </div>
+                <div>
+                    <label for="a">A</label>
+                    <input type="radio" name="grades" id="a" value="A">
+                </div>
+                <div>
+                    <label for="aminus">A-</label>
+                    <input type="radio" name="grades" id="aminus" value="A-">
+                </div>
+                <div>
+                    <label for="bplus">B+</label>
+                    <input type="radio" name="grades" id="bplus" value="B+">
+                </div>
+                <div>
+                    <label for="b">B</label>
+                    <input type="radio" name="grades" id="b" value="B">
+                </div>
+                <div>
+                    <label for="bminus">B-</label>
+                    <input type="radio" name="grades" id="bminus" value="B-">
+                </div>
+                <div>
+                    <label for="cplus">C+</label>
+                    <input type="radio" name="grades" id="cplus" value="C+">
+                </div>
+                <div>
+                    <label for="c">C</label>
+                    <input type="radio" name="grades" id="c" value="C">
+                </div>
+                <div>
+                    <label for="cminus">C-</label>
+                    <input type="radio" name="grades" id="cminus" value="C-">
+                </div>
+                <div>
+                    <label for="dplus">D+</label>
+                    <input type="radio" name="grades" id="dplus" value="D+">
+                </div>
+                <div>
+                    <label for="d">D</label>
+                    <input type="radio" name="grades" id="d" value="D">
+                </div>
+                <div>
+                    <label for="dminus">D-</label>
+                    <input type="radio" name="grades" id="dminus" value="D-">
+                </div>
+                <div>
+                    <label for="f">F</label>
+                    <input type="radio" name="grades" id="f" value="F">
+                </div>
+            </div>
+            <div id="instructorcontainer">
+                <label for="instructor">Instructor:</label>
+                <input type="text" name="instructor" id="instructor" placeholder="Dr. Dolittle">
+            </div>
+        </form>
+    </body>
+</html>
