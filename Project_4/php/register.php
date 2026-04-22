@@ -1,5 +1,5 @@
 <?php
-require "db.php";
+require "db.php"; #requires the db.php file to be created within the same directory and used.
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

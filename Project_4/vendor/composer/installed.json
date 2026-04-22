@@ -1,0 +1,72 @@
+{
+    "packages": [
+        {
+            "name": "rakibtg/sleekdb",
+            "version": "2.50",
+            "version_normalized": "2.50.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SleekDB/SleekDB.git",
+                "reference": "b498a4e3b389adc060c99d4ac8e4d2b5c69fc0d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SleekDB/SleekDB/zipball/b498a4e3b389adc060c99d4ac8e4d2b5c69fc0d2",
+                "reference": "b498a4e3b389adc060c99d4ac8e4d2b5c69fc0d2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=8.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.0",
+                "spatie/phpunit-watcher": "^1.23"
+            },
+            "time": "2025-11-16T17:43:54+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SleekDB\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "rakibtg",
+                    "email": "rakibtg@gmail.com"
+                }
+            ],
+            "description": "SleekDB - A NoSQL Database made using PHP",
+            "keywords": [
+                "SleekDB",
+                "api",
+                "database",
+                "flatfile",
+                "framework",
+                "micro",
+                "nosql",
+                "php",
+                "rest"
+            ],
+            "support": {
+                "issues": "https://github.com/SleekDB/SleekDB/issues",
+                "source": "https://github.com/SleekDB/SleekDB/tree/2.50"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sleekdb",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../rakibtg/sleekdb"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

@@ -1,22 +1,24 @@
 <?php
 require "../vendor/autoload.php";
 
-use SleekDB\SleekDB;
+use SleekDB\Store;
 
 $dataDir = __DIR__ . "/db";
 
-$store = SleekDB::store("test", $dataDir);
+$store = new Store("test", $dataDir);
 
 // Insert test data
 $store->insert([
-    "name" => "Ej",
+    "name" => "Marcus",
     "test" => "SleekDB is working"
 ]);
 
-// Fetch data
-$results = $store->fetch();
+// Fetches all data in the store and returns an array containing each 'document'
+$resultArray = $store->findAll(); //[["name" => "Marcus", "test" => "SleekDB is working"]]
 
-echo "<pre>";
-print_r($results);
-echo "</pre>";
+foreach($resultArray as $user => ["name" => $name, "test" => $testMsg]) {
+    echo $name . " " . $testMsg; //Outputs: "Marcus SleekDB is working"
+}
+
+
 ?>
