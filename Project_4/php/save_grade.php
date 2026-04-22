@@ -7,7 +7,6 @@ if (!isset($_SESSION["user"])) {
 }
 
 $grades = getGradeStore();
-
 $user = $_SESSION["user"];
 
 $data = [
@@ -20,7 +19,7 @@ $data = [
     "instructor" => $_POST["instructor"]
 ];
 
-//  Duplicate check
+// Duplicate check
 $duplicate = $grades
     ->where("student_id", "=", $user)
     ->where("semester", "=", $data["semester"])
@@ -29,7 +28,7 @@ $duplicate = $grades
     ->fetch();
 
 if ($duplicate) {
-    echo "Duplicate course entry!";
+    echo "Duplicate entry!";
     exit();
 }
 
