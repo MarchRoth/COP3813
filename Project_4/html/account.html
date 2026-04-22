@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Account Creation Page</title>
+        <script src="../javascript/validateaccount.js" defer></script>
     </head>
     <body>
         <h1>Account Creation Page</h1>
@@ -10,10 +11,12 @@
             <div class="idcontainer">
                 <label for="newid">Student I.D.</label>
                 <input type="text" name="newid" id="newid" placeholder="Enter New Student I.D.">
+                <span id="iderror"></span>
             </div>
             <div class="passwordcontainer">
                 <label for="createpassword">Password</label>
                 <input type="text" name="createpassword" id="createpassword" placeholder="Enter New Password">
+                <span id="passworderror"></span>
             </div>
             <div class="passwordcontainer">
                 <label for="confirmpassword">Confirm Password</label>
