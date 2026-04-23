@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $users = getUserStore();
 
+    /*
     // Check duplicate user
     $existing = $users->where("student_id", "=", $id)->fetch();
 
@@ -15,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "User already exists.";
         exit();
     }
+    */
 
     $users->insert([
         "student_id" => $id,

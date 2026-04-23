@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $users = getUserStore();
 
-    $user = $users->where("student_id", "=", $id)->fetch();
+    $user = $users->findBy(["student_id", "=", $id]);
 
     if ($user && password_verify($password, $user[0]["password"])) {
         $_SESSION["user"] = $id;
-        header("Location: action.html");
+        header("Location: ../html/user.html");
         exit();
     }
 

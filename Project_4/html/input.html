@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Please Enter The New Grade Information</h1>
-        <form method="POST" id="gradeform">
+        <form method="POST" action="../php/save_grade.php" id="gradeform">
             <div class="formrow">
                 <div id="semestercontainer">
                     <label for="semester">Semester:</label>
@@ -24,7 +24,7 @@
                 </div>
                 <div id="creditcontainer">
                     <label for="credithours">Credit Hours:</label>
-                    <input type="text" name="credithourse" id="credithours" placeholder="3">
+                    <input type="text" name="credithours" id="credithours" placeholder="3">
                 </div>
             </div>
             <fieldset id="gradecontainer">
@@ -103,6 +103,9 @@
             <div id="instructorcontainer">
                 <label for="instructor">Instructor:</label>
                 <input type="text" name="instructor" id="instructor" placeholder="Dr. Dolittle">
+            </div>
+            <div id="gradesubmitcontainer">
+                <input button type="submit" value="Add Grade">
             </div>
         </form>
     </body>

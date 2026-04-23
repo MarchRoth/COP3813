@@ -15,18 +15,18 @@ $data = [
     "semester" => $_POST["semester"],
     "year" => $_POST["year"],
     "course" => $_POST["courseid"],
-    "credits" => (int)$_POST["credithours"],
+    "credits" => $_POST["credithours"], //[..., "credits" => $credithours]
     "grade" => $_POST["grades"],
     "instructor" => $_POST["instructor"]
 ];
 
 //  Duplicate check
-$duplicate = $grades
-    ->where("student_id", "=", $user)
-    ->where("semester", "=", $data["semester"])
-    ->where("year", "=", $data["year"])
-    ->where("course", "=", $data["course"])
-    ->fetch();
+$duplicate = $grades->findBy([
+    ["student_id", "=", $user],
+    ["semester", "=", $data["semester"]],
+    ["year", "=", $data["year"]],
+    ["course", "=", $data["course"]]
+]);
 
 if ($duplicate) {
     echo "Duplicate course entry!";

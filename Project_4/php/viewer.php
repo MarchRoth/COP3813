@@ -33,7 +33,7 @@ $sort = $_GET["sort"] ?? "";
 // ----------------------
 // Fetch Grades
 // ----------------------
-$query = $gradesStore->where("student_id", "=", $user);
+$grades = $gradesStore->findBy(["student_id", "=", $user]);
 
 if ($filterSemester) {
     $query = $query->where("semester", "=", $filterSemester);
