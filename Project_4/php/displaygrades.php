@@ -68,6 +68,7 @@ $gpa = $totalCredits ? $totalPoints / $totalCredits : 0;
     </label>
 
     <button type="submit">Apply</button>
+    <input type="button" value="Return to Previous Page" onclick="location.href='../html/user.html'">
 </form>
 
 <!-- Grades Table -->

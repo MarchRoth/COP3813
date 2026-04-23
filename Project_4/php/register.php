@@ -10,11 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     // Check duplicate user
-$existing = $users->findBy(["student_id", "=", $id]);
+    $existing = $users->findBy(["student_id", "=", $id]);
 
     if ($existing) {
-        echo "User already exists.";
-        exit();
+        header("Location: ../html/index.html");
     }
     
 
@@ -22,8 +21,8 @@ $existing = $users->findBy(["student_id", "=", $id]);
         "student_id" => $id,
         "password" => password_hash($password, PASSWORD_DEFAULT)
     ]);
-/*
-    echo "Account created!";
-*/
+
+    header("Location: ../html/user.html");
+
     }
 ?>

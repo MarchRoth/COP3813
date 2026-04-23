@@ -29,12 +29,10 @@ $duplicate = $grades->findBy([
 ]);
 
 if ($duplicate) {
-    echo "Duplicate course entry!";
+    header("Location: ../html/input.html");
     exit();
 }
 
 $grades->insert($data);
-/*
-echo "Grade saved!";
-*/
+header("Location: displaygrades.php");
 ?>

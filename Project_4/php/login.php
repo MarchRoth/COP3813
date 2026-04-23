@@ -16,8 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../html/user.html");
         exit();
     }
-/*
-    echo "Invalid login.";
-*/
+
+    header("Location: ../html/index.html");
+
     }
 ?>
