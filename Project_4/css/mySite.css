@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #121212;
+    --surface-1: #1a1a1a;
+    --surface-2: #202020;
+    --surface-border: #333333;
+    --accent-300: #7dff9e;
+    --accent-400: #42ff72;
+    --accent-500: #00ff41;
+    --accent-600: #00d936;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-disabled: rgba(255, 255, 255, 0.5);
+    --divider: rgba(255, 255, 255, 0.12);
+    --error: #cf6679;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.05rem;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+    padding: 2.5rem 1.25rem 3rem;
+    gap: 0.9rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+    color: var(--text-primary);
+    font-family: "JetBrains Mono", serif;
+}
+
+:is(p, label, span, li, td, th, input, button, select, textarea) {
+    color: var(--text-primary);
+}
+
+:is(input, select, textarea) {
+    font-size: 1.05rem;
+}
+
+a {
+    color: var(--accent-400);
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--accent-300);
+}
+
+:is(form, div, section, article, main, nav, aside, header, footer) {
+    color: inherit;
+}
+
+:is(body, form, section, article, main, nav, aside, header, footer) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > * {
+    margin: 0;
+}
+
+body > h1 {
+    margin-bottom: 0.35rem;
+}
+
+body > h2 {
+    margin: 0.2rem 0;
+}
+
+form {
+    gap: 0.75rem;
+}
+
+form:not(#gradeform),
+#sortingcontainer {
+    width: min(100%, 27rem);
+    padding: 1rem 1.2rem 1.15rem;
+    border: 1px solid var(--surface-border);
+    border-radius: 1rem;
+    background-color: var(--surface-1);
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+form:not(#gradeform) > div {
+    width: min(100%, 24rem);
+}
+
+form:not(#gradeform) > div label {
+    margin-bottom: 0.15rem;
+}
+
+form:not(#gradeform) > div input:not([type="button"]):not([type="submit"]):not([type="reset"]) {
+    width: min(100%, 18rem);
+    box-sizing: border-box;
+}
+
+.formrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 0.3rem;
+}
+
+.formrow > div {
+    display: grid;
+    grid-template-columns: 7.25rem 10rem;
+    align-items: center;
+    justify-content: start;
+    min-width: 17.25rem;
+}
+
+.formrow label {
+    justify-self: end;
+    text-align: right;
+    padding-right: 0.45rem;
+}
+
+.formrow input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#gradeform {
+    gap: 0.5rem;
+}
+
+#gradecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0.45rem 0 0.5rem;
+    padding: 0.35rem 1rem 0.85rem;
+    border: 3px double var(--accent-600);
+    background-color: var(--surface-1);
+    border-top-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+}
+
+#instructorcontainer {
+    margin-top: 0.2rem;
+}
+
+.graderow {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.graderow > div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 3.2rem;
+    gap: 0.2rem;
+    text-align: left;
+}
+
+.graderow label {
+    min-width: 1.15rem;
+    text-align: left;
+}
+
+label[for="w"],
+label[for="i"] {
+    color: var(--text-disabled);
+}
+
+.graderow input[type="radio"] {
+    margin: 0;
+}
+
+#gradecontainer legend {
+    padding: 0 0.35rem;
+    margin-bottom: 0.1rem;
+    color: var(--accent-500);
+    font-family: "JetBrains Mono", serif;
+    font-style: italic;
+    text-align: left;
+    text-shadow:
+        -1px -1px 0 var(--bg),
+        1px -1px 0 var(--bg),
+        -1px 1px 0 var(--bg),
+        1px 1px 0 var(--bg),
+        -2px 0 0 var(--bg),
+        2px 0 0 var(--bg),
+        0 -2px 0 var(--bg),
+        0 2px 0 var(--bg),
+        -2px -1px 0 var(--bg),
+        2px -1px 0 var(--bg),
+        -2px 1px 0 var(--bg),
+        2px 1px 0 var(--bg);
+}
+
+:is(
+    input[type="text"],
+    input[type="number"],
+    input[type="password"],
+    input[type="email"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="date"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    select,
+    textarea
+) {
+    background-color: var(--surface-2);
+    border-color: var(--surface-border);
+    color: var(--text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-disabled);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-500);
+    color: var(--text-primary);
+}
+
+:is(input[type="button"], input[type="submit"], input[type="reset"], button) {
+    appearance: none;
+    align-items: center;
+    background-color: var(--surface-2);
+    border: 3px double var(--accent-500);
+    border-radius: 999px;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.12rem;
+    font-weight: 700;
+    height: 2.25rem;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    margin-top: 0.3rem;
+    padding: 0 1.15rem;
+    text-shadow: none;
+    transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+:is(input[type="button"], input[type="submit"], input[type="reset"], button):hover {
+    background-color: var(--surface-1);
+    color: var(--accent-500);
+}
+
+:is(
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    button
+):is(:focus, :active) {
+    background-color: var(--surface-1);
+    color: var(--accent-400);
+    outline: 2px solid rgba(125, 255, 158, 0.3);
+    outline-offset: 2px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--accent-500);
+}
+
+hr {
+    border-color: var(--divider);
+}
+
+table,
+thead,
+tbody,
+tfoot,
+tr {
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+td,
+th {
+    border-color: var(--divider);
+}
+
+span[id*="error"] {
+    color: var(--error);
+}
+
+#sortingcontainer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sortingcontainer {
+    gap: 0.8rem;
+}
+
+#sortingcontainer > div {
+    flex-direction: row-reverse;
+    gap: 0.45rem;
+}
