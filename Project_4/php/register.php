@@ -8,21 +8,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $users = getUserStore();
 
-    /*
+    
     // Check duplicate user
-    $existing = $users->where("student_id", "=", $id)->fetch();
+$existing = $users->findBy(["student_id", "=", $id]);
 
     if ($existing) {
         echo "User already exists.";
         exit();
     }
-    */
+    
 
     $users->insert([
         "student_id" => $id,
         "password" => password_hash($password, PASSWORD_DEFAULT)
     ]);
-
+/*
     echo "Account created!";
-}
+*/
+    }
 ?>

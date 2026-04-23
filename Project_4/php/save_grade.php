@@ -34,6 +34,7 @@ if ($duplicate) {
 }
 
 $grades->insert($data);
-
+/*
 echo "Grade saved!";
+*/
 ?>
