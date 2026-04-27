@@ -50,17 +50,18 @@ function accountVerification(event){
         let studentId = document.getElementById("newid");
         let password = document.getElementById("createpassword");
         let confirmation = document.getElementById("confirmpassword");
-        let verified = true;
+        let idValid = true;
+        let passwordValid = true;
+        let confirmValid = true;
         event.preventDefault();
 
-        verified = validateStudentId(studentId);
+        idValid = validateStudentId(studentId);
+        passwordValid = validatePassword(password);
+        confirmValid = validateConfirmation(password, confirmation);
 
-        if(verified){
-            verified = validatePassword(password);
-            if(verified){
-                verified = validateConfirmation(password, confirmation);
-                if(verified){alert("Account created successfully!\nPlease login via Existing User Login."),newUserForm.submit();}
-            }
+        if(idValid && passwordValid && confirmValid){
+            //alert("Account created successfully!\nPlease login via Existing User Login.");
+            newUserForm.submit();
         }
 
         
